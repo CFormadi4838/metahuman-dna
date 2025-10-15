@@ -63,7 +63,7 @@ jobs:
         run: |
           python -m venv .venv
           .\.venv\Scripts\activate
-          .\bin\windows\amd64\hammer.exe build --github-token ${{ secrets.GH_PAT }} --product-id ${{ inputs.product-id }} --python-version ${{ inputs.python-version }} --blender-version ${{ inputs.blender-version }}
+          .\bin\windows\amd64\hammer.exe build  --product-id ${{ inputs.product-id }} --python-version ${{ inputs.python-version }} --blender-version ${{ inputs.blender-version }}
       
       - name: Upload Windows amd64 Artifacts
         uses: actions/upload-artifact@v4
